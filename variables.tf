@@ -103,6 +103,7 @@ variable "create" {
 variable "ebs_volumes" {
   description = "(Optional) Number of EBS volumes to create"
   type        = string
+  default = "1"
 }
 
 
