@@ -21,7 +21,7 @@ variable "size" {
 variable "ApplicationOwner" {
   description = "Owner of the Application"
   type        = string
-  default     = "20"
+  default     = ""
 
   validation {
    condition     = contains(["abc@hotmail.com", "abc@gmail.com"], var.ApplicationOwner)
@@ -34,7 +34,7 @@ variable "ApplicationOwner" {
 variable "ApplicationTeam" {
   description = "Owner of the Application"
   type        = string
-  default     = "20"
+  default     = ""
 
   validation {
    condition     = contains(["Team1","Team2"], var.ApplicationTeam)
@@ -73,7 +73,7 @@ variable "ServiceCriticality" {
   default     = ""
 
   validation {
-   condition     = contains(["High","Low"," Medium"], var.BusinessTower)
+   condition     = contains(["High","Low"," Medium"], var.ServiceCriticality)
    error_message = "Please provide a valid Service Criticality, Valid values are High, Low and Medium"
  }
 }
