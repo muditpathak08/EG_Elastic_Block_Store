@@ -1,6 +1,6 @@
 region="us-east-2"
 Environment="Dev"
-ebs_volumes="1"
+ebs_volumes="3"
 size = "20"
 ApplicationOwner="abc@hotmail.com"
 ApplicationTeam="Team1"
