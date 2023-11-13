@@ -8,7 +8,7 @@ variable "region" {
 variable "azs" {
   description = "(Required) The AZs where the EBS volume will exist"
   type        = list(string)
-  default     = ""
+  default     = [""]
 }
 
 variable "INSTANCE_ID" {
@@ -22,7 +22,7 @@ variable "INSTANCE_ID" {
 variable "size" {
   description = "(Optional) The size of the drive in GiBs"
   type        = list(number)
-  default     = ""
+  default     = [""]
 }
 
 
