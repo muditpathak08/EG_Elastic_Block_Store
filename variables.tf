@@ -4,16 +4,25 @@ variable "region" {
   default     = ""
 }
 
+#AWS Availability zone where resources are created
 variable "azs" {
   description = "(Required) The AZs where the EBS volume will exist"
-  type        = string
-  default     = "us-east-2a"
+  type        = list(string)
+  default     = ""
 }
 
+variable "INSTANCE_ID" {
+  description = "(Required) The Instance ID of the Instance to attach the created EBS"
+  type        = string
+  default     = ""
+}
+
+
+#Size of the EBS needed to be created
 variable "size" {
   description = "(Optional) The size of the drive in GiBs"
-  type        = string
-  default     = "20"
+  type        = list(number)
+  default     = ""
 }
 
 
@@ -90,6 +99,12 @@ validation {
 
 
 
+variable "ebs_device_name" {
+  type        = list(string)
+  description = "Name of the EBS device to mount"
+  #default     = ["/dev/xvdb", "/dev/xvdc", "/dev/xvdd", "/dev/xvde", "/dev/xvdf", "/dev/xvdg", "/dev/xvdh", "/dev/xvdi", "/dev/xvdj", "/dev/xvdk", "/dev/xvdl", "/dev/xvdm", "/dev/xvdn", "/dev/xvdo", "/dev/xvdp", "/dev/xvdq", "/dev/xvdr", "/dev/xvds", "/dev/xvdt", "/dev/xvdu", "/dev/xvdv", "/dev/xvdw", "/dev/xvdx", "/dev/xvdy", "/dev/xvdz"]
+default = [""]
+}
 
 
 
