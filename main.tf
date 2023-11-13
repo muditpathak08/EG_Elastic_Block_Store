@@ -22,6 +22,6 @@ resource "aws_volume_attachment" "project-iac-volume-attachment" {
   # device_name = var.ebs_device_name[count.index]
   # device_name = [for device_name in var.device_name : device_name]
   device_name = var.device_name[count.index]
-  volume_id   = aws_ebs_volume.project-iac-ebs.id[count.index]
+  volume_id   = aws_ebs_volume.project-iac-ebs[count.index].id
   instance_id = var.INSTANCE_ID
 }
