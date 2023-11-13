@@ -22,7 +22,7 @@ variable "INSTANCE_ID" {
 variable "size" {
   description = "(Optional) The size of the drive in GiBs"
   type        = list(number)
-  default     = [""]
+  default     = []
 }
 
 
