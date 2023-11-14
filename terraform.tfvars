@@ -2,7 +2,7 @@ region="us-east-2"
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
 azs=["us-east-2a","us-east-2a"]
-INSTANCE_ID="i-062e81e2f4fde7167"
+INSTANCE_ID="i-0740f975731f86f00"
 ebs_device_name=["/dev/xvdb","/dev/xvdc"]
 Environment="Dev"
 ebs_volumes="2"
