@@ -52,11 +52,11 @@ resource "aws_volume_attachment" "project-iac-volume-attachment" {
 
 
 
-# resource "aws_volume_attachment" "project-iac-volume-attachment-from-snapshot" {
-#   count = "${var.create_from_snapshot ? var.ebs_volumes : 0}"
-#   # device_name = var.ebs_device_name[count.index]
-#   # device_name = [for device_name in var.device_name : device_name]
-#   device_name = var.ebs_device_name[count.index]
-#   volume_id   = aws_ebs_volume.project-iac-ebs-from-snapshot[count.index].id
-#   instance_id = var.INSTANCE_ID
-# }
+resource "aws_volume_attachment" "project-iac-volume-attachment-from-snapshot" {
+  count = "${var.create_from_snapshot ? var.ebs_volumes : 0}"
+  # device_name = var.ebs_device_name[count.index]
+  # device_name = [for device_name in var.device_name : device_name]
+  device_name = var.ebs_device_name[count.index]
+  volume_id   = aws_ebs_volume.project-iac-ebs-from-snapshot[count.index].id
+  instance_id = var.INSTANCE_ID
+}
