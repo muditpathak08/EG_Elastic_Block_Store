@@ -25,11 +25,11 @@ variable "size" {
   default     = []
 }
 
-# variable "create_from_snapshot" {
-#   description = "Create EBS Volume from Snapshot"
-#   type        = bool
-#   default     = false
-# }
+variable "create_from_snapshot" {
+  description = "Create EBS Volume from Snapshot"
+  type        = bool
+  default     = false
+}
 
 
 

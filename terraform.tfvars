@@ -1,5 +1,6 @@
 region="us-east-2"
 create_from_snapshot=false
+snapshot_id=""
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
 azs=["us-east-2a"]
