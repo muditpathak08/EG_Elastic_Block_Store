@@ -1,5 +1,5 @@
 region="us-east-2"
-create_from_snapshot=false
+create_from_snapshot=true
 snapshot_id=""
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
