@@ -1,6 +1,6 @@
 resource "aws_ebs_volume" "project-iac-ebs" {
-  # count = "${var.create ? length(var.azs) * var.ebs_volumes : 0}"
-  count = var.ebs_volumes
+  count = "${var.create_from_snapshot ? snapshot_id = var.snapshot_id : var.ebs_volumes}"
+  # count = var.ebs_volumes
   availability_zone = var.azs[count.index]
   encrypted         = var.encrypted
   # iops              = "${var.iops}"
