@@ -1,4 +1,6 @@
 region="us-east-2"
+
+##To be true if EBS Volume to be created from snapshot
 create_from_snapshot=true
 snapshot_id="snap-0a22ca8e6f81c655e"
 
