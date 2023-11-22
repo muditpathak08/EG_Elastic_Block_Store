@@ -2,6 +2,8 @@ region="us-east-2"
 
 ##To be true if EBS Volume to be created from snapshot
 create_from_snapshot=true
+
+##Provide this only if EBS to be created from Snapshot Id
 snapshot_id="snap-0e19dde46f4d7283d"
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
