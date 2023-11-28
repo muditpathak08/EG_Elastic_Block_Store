@@ -4,7 +4,7 @@ region="us-east-2"
 create_from_snapshot=true
 
 ##Provide this only if EBS to be created from Snapshot Id
-# snapshot_id="snap-0e19dde46f4d7283d"
+snapshot_id="snap-0d63b3b40a83bd71c"
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
 azs=["us-east-2a"]
