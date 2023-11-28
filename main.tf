@@ -3,6 +3,7 @@ resource "aws_ebs_volume" "project-iac-ebs" {
   # count = var.create_from_snapshot == false ? 1 : 0
 
   # count = "${var.create_from_snapshot ? 0 : var.ebs_volumes}"
+  count = var.ebs_volumes
   availability_zone = var.azs[count.index]
   encrypted         = var.encrypted
   # iops              = "${var.iops}"
