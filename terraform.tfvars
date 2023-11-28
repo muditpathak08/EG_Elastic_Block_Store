@@ -4,11 +4,14 @@ region="us-east-2"
 create_from_snapshot=true
 
 ##Provide this only if EBS to be created from Snapshot Id
-snapshot_id="snap-0e19dde46f4d7283d"
+# snapshot_id="snap-0e19dde46f4d7283d"
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
 azs=["us-east-2a"]
-INSTANCE_ID="i-09b8d6cf9951d36f0"
+INSTANCE_ID="i-0c46cddd31821184d"
+
+##This should match the Count of EBS_Volumes.Also each EBS would be created in the azs specified
+# with one to one mapping
 ebs_device_name=["/dev/xvdv"]
 Environment="Dev"
 ebs_volumes="1"
