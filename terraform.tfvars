@@ -1,8 +1,5 @@
 region="us-east-2"
 
-##To be true if EBS Volume to be created from snapshot
-create_from_snapshot=true
-
 ##Provide this only if EBS to be created from Snapshot Id. Else leave this Blank
 snapshot_id=""
 
