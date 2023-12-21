@@ -4,7 +4,7 @@ region="us-east-2"
 snapshot_id=""
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
-azs=["us-east-2a","us-east-2b","us-east-2c"]
+azs=["us-east-2a","us-east-2a","us-east-2a"]
 INSTANCE_ID="i-0d6ee02df29f78dc0"
 
 ##This should match the Count of EBS_Volumes.Also each EBS would be created in the azs specified
