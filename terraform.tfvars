@@ -4,15 +4,15 @@ region="us-east-2"
 snapshot_id=""
 
 ##Availibility-Zone of the Volume must be the same as that of the Instance
-azs=["us-east-2a"]
-INSTANCE_ID="i-0c46cddd31821184d"
+azs=["us-east-2a","us-east-2b","us-east-2c"]
+INSTANCE_ID="i-0d6ee02df29f78dc0"
 
 ##This should match the Count of EBS_Volumes.Also each EBS would be created in the azs specified
 # with one to one mapping
-ebs_device_name=["/dev/xvdv"]
+ebs_device_name=["/dev/xvdv","/dev/xvda","/dev/xvdb"]
 Environment="Dev"
-ebs_volumes="1"
-size = [20]
+ebs_volumes="3"
+size = [20,30,40]
 ApplicationOwner="abc@hotmail.com"
 ApplicationTeam="Team1"
 BackupSchedule="DR7y"
